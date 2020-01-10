@@ -1,0 +1,130 @@
+body {
+  font-family: sans-serif;
+  margin: 0; }
+
+li {
+  list-style-type: disc; }
+
+ol {
+  padding: 0px 30px 0px 28px; }
+
+.caption {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0000ff;
+  text-transform: uppercase; }
+
+header {
+  background: #add8e6;
+  text-align: center;
+  padding: 14px 0px; }
+
+footer {
+  background: #add8e6;
+  text-align: center;
+  padding: 24px 0px; }
+
+.cont {
+  display: grid;
+  grid-template-columns: 180px 1fr; }
+
+aside {
+  background: #f0e68c;
+  padding: 26px 0px 26px 0px; }
+
+.typeSport {
+  font-weight: bold;
+  padding: 0px 0px 0px 10px; }
+
+article {
+  background: url(../img/ball.jpg) white top right repeat-y;
+  padding: 20px 12px 0px 20px; }
+
+article .rightSiteCap {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0px 0px 20px 0px; }
+
+.champText p {
+  margin: 0px 0px 20px 0px; }
+
+.champImg {
+  float: left;
+  margin: 0px 20px 20px 0px; }
+
+.clear {
+  clear: both; }
+
+.champImgMobile {
+  float: left;
+  margin: 0px 20px 20px 0px;
+  background: url("../img/champ.jpg") center no-repeat;
+  background-size: cover;
+  width: 200px;
+  height: 133px; }
+
+@media (max-width: 1199px) {
+  body footer {
+    padding: 15px 0px; }
+
+  body .rightSite {
+    padding: 15px 12px 0px 15px; }
+
+  body .rightSite .rightSiteCap {
+    padding: 0px 0px 15px 0px; }
+
+  body aside {
+    padding: 15px 0px 15px 0px; } }
+@media (max-width: 991px) {
+  body.m1 .champImgMobile {
+    margin: 0px 10px 10px 0px; }
+
+  body.m1 .champText p {
+    margin: 0px 0px 10px 0px; }
+
+  body.m1 article {
+    background: white; } }
+@media (max-width: 767px) {
+  body.m1.m2 header, footer {
+    display: none; }
+
+  body.m1.m2 .cont {
+    grid-template-columns: 1fr; }
+
+  body.m1.m2 aside {
+    order: 2;
+    background: none;
+    padding: 10px 10px 0px 10px; }
+
+  body.m1.m2 .typeSport {
+    padding: 0px 0px 0px 0px; }
+
+  body.m1.m2 article {
+    order: 1;
+    padding: 10px 10px 0px 10px; }
+
+  body.m1.m2 ol {
+    padding: 0; }
+
+  body.m1.m2 li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 1px 5px 1px 0px; }
+
+  body.m1.m2 .cont {
+    background: white; }
+
+  body.m1.m2 .champText {
+    font-size: 14px; } }
+@media (max-width: 479px) {
+  body.m1.m2.m3 .champImgMobile {
+    float: none;
+    width: 100%;
+    height: 200px;
+    margin: 0px 0px 10px 0px; }
+
+  body.m1.m2.m3 .champText {
+    font-size: 12px; } }
+
+/*# sourceMappingURL=style.css.map */
