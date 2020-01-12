@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, height=device-height, target-densitydpi=device-dpi, initial-scale=1">
+    <title>ANKETA_IF</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+<script>
+    let name = prompt("Введите ваше имя");
+    while (name==="" || name===" " || name==="  "){
+        name = prompt("Введите хоть какое имя");
+    }
+    let surname = prompt("Введите вашу фамилию");
+    while (surname==="" || surname===" " || surname==="  "){
+        surname = prompt("Введите хоть какую-нибудь фамилию");
+    }
+    let patronymic = prompt("Введите ваше отчество");
+    while (patronymic==="" || patronymic===" " || patronymic==="  "){
+        patronymic = prompt("Введите хоть какую-нибудь фамилию");
+    }
+    let sex = confirm("Если ваш пол - женский нажмите Да, если мужской нажмите Отмена"),
+        age = Number(prompt("Введите ваш возраст")), pension;
+    while (!isFinite(age) || (age <= 0)) {
+        age = Number(prompt("Введиде только положительное число лет"));
+    }
+    pension = ((sex === true && (age >= 55)) || (sex === false && (age >= 65))) ? pension = "да" : pension = "нет";
+    sex = (sex === true) ?  sex = "женский" : sex = "мужской";
+    alert("ваше ФИО: " + name + " " + surname + " " + patronymic + "\nваш возраст в годах: " + age + "\nваш возраст в днях: " + (age * 365) + "\nчерез 5 лет вам будет: " + (age + 5) + "\nваш пол: " + sex + "\nвы на пенсии: " + pension);
+</script>
+</body>
+</html>
