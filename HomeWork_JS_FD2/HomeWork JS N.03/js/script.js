@@ -2,10 +2,13 @@ let errors = ["`", "~", "!", " ", "@", "/", "#", "$", "%", "^", "&", "*", "(", "
 let errorsLn = errors.length;
 
 function errFun(valueStr) {
+    if (valueStr === null || valueStr === "") {
+        return false;
+    }
     let valueStrM = valueStr.split("");
     let valueStrLn = valueStrM.length;
-    for (var i = 0; i < errorsLn; i++) {
-        for (var a = 0; a < valueStrLn; a++) {
+    for (let i = 0; i < errorsLn; i++) {
+        for (let a = 0; a < valueStrLn; a++) {
             if (valueStrM[a] === errors[i]) {
                 return false;
             }
@@ -14,7 +17,6 @@ function errFun(valueStr) {
 };
 
 let name = prompt("Введите ваше имя");
-console.log(errFun(name));
 while (errFun(name) === false) {
     name = prompt("Введите имя привильно!");
 }
