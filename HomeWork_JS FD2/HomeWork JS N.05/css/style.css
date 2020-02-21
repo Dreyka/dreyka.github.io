@@ -1,0 +1,85 @@
+@keyframes starRound {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes squareSize {
+    from {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(1, 0.3);
+    }
+    50% {
+        transform: scale(0.3, 0.3);
+    }
+    75% {
+        transform: scale(0.3, 1);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes solarMoon {
+    from {
+        clip-path: circle(50% at 50% 50%);
+        background-color: gold;
+        transform: translateX(0);
+    }
+    50% {
+        background-color: lightgrey;
+        transform: translateX(800px);
+        clip-path: polygon(100% 29%, 100% 29%, 49% 1%, 49% 1%, 1% 35%, 1% 35%, 0% 77%, 0% 77%, 31% 99%, 31% 99%, 71% 99%, 71% 99%, 99% 70%, 99% 74%, 67% 80%, 67% 80%, 40% 77%, 40% 77%, 30% 52%, 30% 52%, 39% 34%, 39% 34%, 62% 21%, 62% 21%, 86% 24%, 86% 24%);
+    }
+    to {
+        clip-path: circle(50% at 50% 50%);
+        background-color: gold;
+        transform: translateX(0);
+    }
+}
+
+.conteiner {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: azure;
+    border-radius: 10px;
+}
+
+.star {
+    width: 250px;
+    height: 250px;
+    background-color: blue;
+    -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transform-origin: center center;
+    animation: starRound 5s infinite;
+}
+
+.square {
+    width: 300px;
+    height: 300px;
+    background-color: green;
+}
+
+.round {
+    width: 200px;
+    height: 200px;
+    background-color: gold;
+    transform-origin: left center;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.conteiner:hover > div.square {
+    animation: squareSize 5s infinite;
+}
+
+.conteiner:hover > div.round {
+    animation: solarMoon 7s infinite;
+}
+
+/*# sourceMappingURL=style.css.map */
