@@ -15,7 +15,6 @@
             ;
             for (let i = 0; i < (clearWord.length - 1) / 2; i++) {
                 if (clearWord[i] !== clearWord[clearWord.length - (i + 1)]) return false;
-                console.log("* *");
             }
             ;
             return true;
