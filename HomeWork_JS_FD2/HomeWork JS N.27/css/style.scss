@@ -1,0 +1,62 @@
+body {
+   margin: 0px;
+ }
+
+label {
+  //display: flex;
+  padding: 15px 0px 0px 0px;
+}
+
+form {
+  padding: 10px;
+  margin: 15px 0px 0px 0px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+textarea {
+  display: block;
+  width: 50%;
+}
+
+.itemForm {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 0px 0px 15px 0px;
+
+  label {
+    flex: 0 0 15%;
+  }
+
+}
+input.small{
+  flex: 0 0 30%;
+}
+input.medium{
+  flex: 0 0 50%;
+}
+input.large{
+  flex: 0 0 70%;
+}
+input.xlarge{
+  flex: 0 0 84%;
+}
+span[class^="warning"]{
+  font-size: 10px;
+  font-weight: bold;
+  color: red;
+  flex: 0 0 100%;
+  display: block;
+  width: 100%;
+  padding: 0px 15px 0px 0px;
+  bottom: 0px;
+  left: 15%;
+}
+textarea{
+  flex: 0 0 100%;
+}

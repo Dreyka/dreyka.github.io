@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, height=device-height, target-densitydpi=device-dpi, initial-scale=1">
+    <title>VALID_FROM</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+<div class="container">
+    <form name="infoWEB" action="https://fe.it-academy.by/TestForm.php" method="post">
+        <div class="itemForm">
+            <label for="Developer">Разработчик:</label>
+            <input class="xlarge" type="text" name="developer" id="Developer">
+        </div>
+        <div class="itemForm">
+            <label for="NameWebsite">Название сайта:</label>
+            <input class="xlarge" type="text" name="nameWebsite" id="NameWebsite">
+        </div>
+        <div class="itemForm">
+            <label for="WebURL">URL сайта:</label>
+            <input class="large" type="text" name="webURL" id="WebURL">
+        </div>
+        <div class="itemForm">
+            <label for="DateStart">Дата запуска сайта:</label>
+            <input class="small" type="text" name="dateStart" id="DateStart">
+        </div>
+        <div class="itemForm">
+            <label for="Visitors">Посетители:</label>
+            <input class="small" type="number" name="visitors" id="Visitors">
+        </div>
+        <div class="itemForm">
+            <label for="Mail">E-mail для связи:</label>
+            <input class="medium" type="text" name="mail" id="Mail">
+        </div>
+        <div class="itemForm">
+            <label for="Heading">Рубрика каталога:</label>
+            <select name="heading" id="Heading">
+                <option value="1">бытовая техника</option>
+                <option value="2">домашний уют</option>
+                <option value="3">здоровье</option>
+            </select>
+        </div>
+        <div class="itemForm">
+            <label>Размещение:</label>
+            <div id="Placing">
+                <input id="Placing1" type="radio" name="placing" value="1">
+                <span>бесплатное</span>
+                <input id="Placing2" type="radio" name="placing" value="2">
+                <span>платное</span>
+                <input id="Placing3" type="radio" name="placing" value="3">
+                <span>VIP</span>
+            </div>
+        </div>
+        <div class="itemForm">
+            <label for="Reviews">Разрешить отзывы:</label>
+            <input type="checkbox" name="reviews" id="Reviews">
+        </div>
+        <div class="itemForm">
+            <label for="Description">Описание сайта:</label>
+            <textarea name="description" id="Description"></textarea>
+        </div>
+        <input type="submit" value="Опубликовать" id="SubmitForm">
+    </form>
+</div>
+</body>
+<script type="text/javascript" src="js/script.js"></script>
+</html>
