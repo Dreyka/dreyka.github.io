@@ -1,0 +1,27 @@
+body {
+   margin: 0px;
+ }
+
+.dragndropArea{
+  position: relative;
+  height: 1500px;
+  display: flex;
+}
+div.img1{
+  background-size: cover;
+   background-image: url("../img/1.jpg");
+   width: 204px;
+   height: 247px;
+ }
+div.img2{
+  background-size: cover;
+  background-image: url("../img/2.jpg");
+  width: 235px;
+  height: 214px;
+}
+div.img3{
+  background-size: cover;
+  background-image: url("../img/3.jpg");
+  width: 183px;
+  height: 275px;
+}
