@@ -1,0 +1,34 @@
+body {
+  margin: 70px 0px 0px 50px;
+  box-sizing: border-box; }
+
+.dragndropArea {
+  position: relative;
+  height: 1500px;
+  display: flex; }
+
+div.img1 {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../img/1.jpg");
+  width: 204px;
+  height: 247px;
+  transform: translateZ(0); }
+
+div.img2 {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../img/2.jpg");
+  width: 235px;
+  height: 214px;
+  transform: translateZ(0); }
+
+div.img3 {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../img/3.jpg");
+  width: 183px;
+  height: 275px;
+  transform: translateZ(0); }
+
+/*# sourceMappingURL=style.css.map */
