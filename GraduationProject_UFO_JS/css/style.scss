@@ -1,0 +1,752 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+}
+
+body {
+  margin: 0px;
+  //background-color: black;
+}
+
+button {
+  border: none;
+  background: transparent;
+  padding: 0px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+
+}
+
+@keyframes animGameMenu {
+  from {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes animGameMenuClose {
+  from {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  .logoImg {
+    width: 150px;
+    height: 150px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../img/logo.svg");
+  }
+
+  .logoText {
+    font-size: 46px;
+    line-height: 60px;
+    color: #333333;
+    font-weight: bold;
+  }
+}
+
+.caption {
+  //flex: 0 0 auto;
+  display: block;
+  font-size: 30px;
+  line-height: 36px;
+  color: #888888;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px 0px;
+}
+
+.mainMenu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 0px;
+
+  .menuCaption {
+    flex: 0 0 auto;
+    font-size: 30px;
+    line-height: 36px;
+    color: #888888;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0px;
+  }
+
+  .mainMenuButton {
+    flex: 0 0 auto;
+    width: 30%;
+    font-size: 30px;
+    line-height: 46px;
+    font-weight: bold;
+    color: #333333;
+    border-radius: 15px;
+    border: solid 2px #333333;
+    margin: 30px auto 0px auto;
+    transition: 0.5s;
+  }
+
+  .mainMenuButton:hover {
+    background-color: #6ab936;
+    border: solid 2px #6ab936;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+}
+
+.created {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  span {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #333333;
+    padding: 15px 0px;
+  }
+}
+
+.score {
+  padding: 50px 0px;
+
+  .scoreCaption {
+    display: block;
+    font-size: 30px;
+    line-height: 36px;
+    color: #888888;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0px;
+  }
+
+  .scoreTable {
+    padding: 30px 0px;
+    .tableRow.tableHead{
+      font-weight: bold;
+    }
+    .tableRow {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 300;
+      color: #333333;
+
+      > div:first-child {
+        flex: 0 0 5%;
+      }
+
+      > div:nth-child(2) {
+        flex: 0 0 35%;
+      }
+
+      > div:nth-child(3) {
+        flex: 0 0 30%;
+      }
+
+      > div:last-child {
+        flex: 0 0 30%;
+      }
+    }
+  }
+}
+
+//FAQ Page
+
+.faq {
+  .item {
+    padding: 30px 0px;
+
+    span + span {
+      display: block;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: normal;
+      color: #333333;
+    }
+  }
+}
+
+//gameOptions Page
+
+.menuBackButton {
+  width: 20%;
+  font-size: 30px;
+  line-height: 46px;
+  font-weight: bold;
+  color: #333333;
+  border-radius: 15px;
+  border: solid 2px #333333;
+  transition: 0.5s;
+}
+
+.start {
+  width: 20%;
+  font-size: 30px;
+  line-height: 46px;
+  font-weight: bold;
+  color: #333333;
+  border-radius: 15px;
+  border: solid 2px #333333;
+  transition: 0.5s;
+}
+
+.start:hover {
+  background-color: #18b6e4;
+  border: solid 2px #18b6e4;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.menuBackButton:hover {
+  background-color: #e03a00;
+  border: solid 2px #e03a00;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.gameOptions {
+  .playerName {
+    padding: 30px 0px;
+
+    span {
+      display: block;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: bold;
+      color: #333333;
+    }
+
+    input {
+      font-size: 20px;
+      line-height: 46px;
+      width: 50%;
+      padding: 15px 0px;
+      border: solid 2px #333333;
+      border-radius: 15px;
+      padding: 0px 0px 0px 15px;
+      margin: 15px 0px 0px 0px;
+    }
+
+    input:focus {
+      outline: none;
+    }
+  }
+
+  .difficult {
+
+
+    > span {
+      display: block;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: bold;
+      color: #333333;
+    }
+
+    .difficultItems {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .item {
+        flex: 0 0 calc(100% / 3);
+        padding: 30px 15px;
+
+        span {
+          display: block;
+          font-size: 18px;
+          line-height: 20px;
+          font-weight: 300;
+          font-style: italic;
+          color: #333333;
+          text-align: center;
+          padding: 30px 30px 30px 30px;
+        }
+
+        .difButton {
+          width: 100%;
+          font-size: 30px;
+          line-height: 46px;
+          font-weight: bold;
+          color: #333333;
+          border-radius: 15px;
+          border: solid 2px #333333;
+          transition: 0.5s;
+          cursor: pointer;
+        }
+
+        .difButton[data-state="true"] {
+          background-color: #e03a00;
+          border: solid 2px #e03a00;
+          color: #FFFFFF;
+        }
+      }
+    }
+
+  }
+
+  .gameOptionsButtons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+//Game page
+
+.gameMenuButton {
+  width: 100px;
+  height: 100px;
+  background-image: url("../img/menuBtnImg.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0.3;
+  cursor: pointer;
+  z-index: 10;
+  transition: 1s;
+}
+
+.gameMenuButton:hover {
+  opacity: 0.7;
+}
+
+.gameMenu {
+  position: absolute;
+  width: 100%;
+  height: 50vw;
+  left: 0px;
+  top: 0px;
+  padding: 5% 5%;
+
+  > div {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 100px 0px 100px 0px;
+  }
+
+
+  span {
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    color: #FFFFFF;
+    font-size: 30px;
+
+  }
+
+  span:first-child {
+    font-weight: bold;
+  }
+
+  span + span {
+    font-weight: normal;
+  }
+
+  button {
+    display: block;
+    width: 40%;
+    font-size: 30px;
+    line-height: 46px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 15px;
+    border: solid 2px #FFFFFF;
+    transition: 0.5s;
+    cursor: pointer;
+    margin: 30px auto;
+  }
+
+  button:hover {
+    color: #18b6e4;
+    background-color: #FFFFFF;
+  }
+}
+
+.gameMenu[data-state="close"] {
+  animation: animGameMenuClose 1s;
+  display: none;
+}
+
+.gameMenu[data-state="open"] {
+  display: block;
+  animation: animGameMenu 1s;
+}
+
+.touchControl {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 30px 30px 30px;
+
+  .touchMove {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100px;
+    height: 100px;
+
+    transform-origin: center center;
+    transform: rotate(45deg);
+
+    button {
+      flex: 0 0 47px;
+      height: 47px;
+      background-color: rgba(107, 107, 107, 0.6);
+      border-radius: 50%;
+    }
+
+    button:active {
+      background-color: rgba(45, 255, 46, 0.6);
+    }
+  }
+
+  .touchFire {
+    button {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background-color: rgba(107, 107, 107, 0.6);
+      margin: 40px 0px 0px 0px;
+    }
+
+    button:active {
+      background-color: rgba(45, 255, 46, 0.6);
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .logo {
+
+    .logoImg {
+      width: 100px;
+      height: 100px;
+    }
+
+    .logoText {
+      font-size: 34px;
+      line-height: 40px;
+    }
+  }
+  .caption {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .mainMenu {
+    padding: 30px 0px;
+
+    .menuCaption {
+      font-size: 24px;
+      line-height: 28px;
+      padding: 10px 0px;
+    }
+
+    .mainMenuButton {
+      width: 50%;
+      font-size: 24px;
+      line-height: 36px;
+      border-radius: 10px;
+      margin: 15px auto 0px auto;
+    }
+  }
+  .created {
+
+    span {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  .score {
+    padding: 30px 0px;
+
+    .scoreTable {
+      padding: 15px 0px;
+      .tableRow.tableHead{
+        font-weight: bold;
+      }
+      .tableRow {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+  //FAQ Page
+
+  .faq {
+    .item {
+      padding: 20px 0px;
+
+      span + span {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  //gameOptions Page
+
+  .menuBackButton {
+    width: 40%;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .start {
+    width: 40%;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .start:hover {
+    background-color: #18b6e4;
+    border: solid 2px #18b6e4;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+
+  .gameOptions {
+    .playerName {
+      padding: 20px 0px;
+
+      span {
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      input {
+        font-size: 16px;
+        line-height: 30px;
+        width: 50%;
+        border-radius: 5px;
+        padding: 0px 0px 0px 10px;
+        margin: 10px 0px 0px 0px;
+      }
+    }
+
+    .difficult {
+
+      > span {
+        display: block;
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      .difficultItems {
+        justify-content: center;
+        .item {
+          flex: 0 0 60%;
+          padding: 10px 5px;
+
+          span {
+            display: block;
+            font-size: 16px;
+            line-height: 18px;
+            padding: 15px;
+          }
+
+          .difButton {
+            width: 100%;
+            font-size: 20px;
+            line-height: 30px;
+          }
+        }
+      }
+
+    }
+
+    //.gameOptionsButtons {
+    //  display: flex;
+    //  flex-direction: row;
+    //  flex-wrap: wrap;
+    //  justify-content: space-between;
+    //}
+  }
+
+  //Game page
+
+  .gameMenuButton {
+    width: 50px;
+    height: 50px;
+  }
+
+  .gameMenu {
+
+    > div {
+      border-radius: 5px;
+      padding: 75px 0px 75px 0px;
+    }
+
+
+    span {
+      line-height: 24px;
+      font-size: 20px;
+
+    }
+
+    button {
+      width: 60%;
+      font-size: 20px;
+      line-height: 32px;
+      border-radius: 5px;
+      margin: 10px auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .mainMenu {
+    padding: 10px 0px;
+    .mainMenuButton {
+      width: 90%;
+    }
+  }
+
+  //FAQ Page
+
+  .faq {
+    .item {
+      padding: 10px 0px;
+
+      span + span {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
+  //gameOptions Page
+
+  .menuBackButton {
+    width: 40%;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .start {
+    width: 40%;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .start:hover {
+    background-color: #18b6e4;
+    border: solid 2px #18b6e4;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+
+  .gameOptions {
+    .playerName {
+      padding: 20px 0px;
+
+      span {
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      input {
+        font-size: 16px;
+        line-height: 30px;
+        width: 50%;
+        border-radius: 5px;
+        padding: 0px 0px 0px 10px;
+        margin: 10px 0px 0px 0px;
+      }
+    }
+
+    .difficult {
+
+      > span {
+        display: block;
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      .difficultItems {
+        justify-content: center;
+        .item {
+          flex: 0 0 60%;
+          padding: 10px 5px;
+
+          span {
+            display: block;
+            font-size: 16px;
+            line-height: 18px;
+            padding: 15px;
+          }
+
+          .difButton {
+            width: 100%;
+            font-size: 20px;
+            line-height: 30px;
+          }
+        }
+      }
+
+    }
+
+    //.gameOptionsButtons {
+    //  display: flex;
+    //  flex-direction: row;
+    //  flex-wrap: wrap;
+    //  justify-content: space-between;
+    //}
+  }
+
+  //Game page
+
+  .gameMenu {
+
+    > div {
+      padding: 40px 0px 40px 0px;
+    }
+
+    button {
+      width: 80%;
+      line-height: 28px;
+    }
+  }
+}
